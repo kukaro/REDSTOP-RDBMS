@@ -1,0 +1,11 @@
+select '****************************************';
+show databases;
+select '****************************************';
+use mydb;
+show tables;
+select '****************************************';
+select * from rs_user;
+select '';
+select * from rs_project;
+select '';
+select * from rs_demo1_urls;
