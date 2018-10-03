@@ -1,2 +1,1 @@
-cd ~/RDBMS
-sudo mysql --force -uroot < docs/sql/test.sql
+sudo mysql --force -uroot -p < docs/sql/test.sql

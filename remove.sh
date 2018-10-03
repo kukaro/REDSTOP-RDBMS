@@ -1,2 +1,1 @@
-cd ~/RDBMS
-sudo mysql --force -uroot < docs/sql/drop-database.sql
+sudo mysql --force -uroot -p < docs/sql/drop-database.sql

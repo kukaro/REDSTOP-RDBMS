@@ -1,1 +1,1 @@
-drop database mydbl;
+drop database mydb;
