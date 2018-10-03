@@ -1,6 +1,7 @@
 use mydb;
 delete from rs_user;
-insert into rs_user(username,password) values('demo',1234);
+insert into rs_user(username,password) values('demo', 1234);
+insert into rs_user(username,password) values('kukaro', 1234);
 
 delete from rs_project;
 insert into rs_project(owner,project_name) values('demo','demo project');
