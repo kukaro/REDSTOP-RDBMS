@@ -33,3 +33,11 @@ create table if not exists rs_kukaro_urls(
 
 alter table rs_kukaro_urls add constraint pk_rskukarourls_url_method primary key (url,method);
 alter table rs_kukaro_urls add constraint fk_rskukarourlsprojectid_rsprojectid foreign key rs_kukaro_urls(project_id) references rs_project(id) on delete cascade;
+
+create table if not exists rs_kukaro_scenario(
+    scenario_name varchar(100) not null default 'default',
+    type set ('L','A') not null,
+    iterate_period time not null default '00:01:00'
+);
+
+alter table rs_kukaro_scenario add constraint pk_rskukaroscenario_scenarioname primary key (scenario_name);

@@ -10,4 +10,6 @@ select * from rs_project;
 select '';
 select * from rs_demo_urls;
 select '';
+select * from rs_kukaro_scenario;
+select '';
 select * from rs_kukaro_urls;

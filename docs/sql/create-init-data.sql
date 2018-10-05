@@ -19,3 +19,6 @@ insert into rs_kukaro_urls(project_id,url,method) values('2', 'http://localhost:
 insert into rs_kukaro_urls(project_id,url,method) values('2', 'http://localhost:4000/web/log-in', 'get');
 insert into rs_kukaro_urls(project_id,url,method) values('2', 'http://localhost:4000/web/log-out', 'get');
 insert into rs_kukaro_urls(project_id,url,method) values('2', 'http://localhost:4000/web/sign-up', 'get');
+
+delete from rs_kukaro_scenario;
+insert into rs_kukaro_scenario(type,iterate_period) values('A','00:00:10');
