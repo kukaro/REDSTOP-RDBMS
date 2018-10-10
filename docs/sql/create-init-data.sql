@@ -8,17 +8,17 @@ insert into rs_project(owner,project_name) values('demo', 'demo project');
 insert into rs_project(owner,project_name) values('kukaro', 'kukaro project');
 
 delete from rs_demo_urls;
-insert into rs_demo_urls(project_id,url,method) values('1', 'http://localhost:4000/api/json-test/single-json','get');
-insert into rs_demo_urls(project_id,url,method) values('1', 'http://localhost:4000/api/json-test/multi-json', 'get');
-insert into rs_demo_urls(project_id,url,method) values('1', 'http://localhost:4000/', 'get');
+insert into rs_demo_urls(project_id,url,method,name) values('1', 'http://localhost:4000/api/json-test/single-json','get','SingleJson');
+insert into rs_demo_urls(project_id,url,method,name) values('1', 'http://localhost:4000/api/json-test/multi-json', 'get','MultiJson');
+insert into rs_demo_urls(project_id,url,method,name) values('1', 'http://localhost:4000/', 'get',"WebRoot");
 
 delete from rs_kukaro_urls;
-insert into rs_kukaro_urls(project_id,url,method) values('2', 'http://localhost:4000/api/json-test/single-json', 'get');
-insert into rs_kukaro_urls(project_id,url,method) values('2', 'http://localhost:4000/api/json-test/multi-json', 'get');
-insert into rs_kukaro_urls(project_id,url,method) values('2', 'http://localhost:4000/', 'get');
-insert into rs_kukaro_urls(project_id,url,method) values('2', 'http://localhost:4000/web/log-in', 'get');
-insert into rs_kukaro_urls(project_id,url,method) values('2', 'http://localhost:4000/web/log-out', 'get');
-insert into rs_kukaro_urls(project_id,url,method) values('2', 'http://localhost:4000/web/sign-up', 'get');
+insert into rs_kukaro_urls(project_id,url,method,name) values('2', 'http://localhost:4000/api/json-test/single-json', 'get','SingleJson');
+insert into rs_kukaro_urls(project_id,url,method,name) values('2', 'http://localhost:4000/api/json-test/multi-json', 'get','MultiJson');
+insert into rs_kukaro_urls(project_id,url,method,name) values('2', 'http://localhost:4000/', 'get','WebRoot');
+insert into rs_kukaro_urls(project_id,url,method,name) values('2', 'http://localhost:4000/web/log-in', 'get','WebLogin');
+insert into rs_kukaro_urls(project_id,url,method,name) values('2', 'http://localhost:4000/web/log-out', 'get','WebLogout');
+insert into rs_kukaro_urls(project_id,url,method,name) values('2', 'http://localhost:4000/web/sign-up', 'get','WebSignUp');
 
-delete from rs_kukaro_scenario;
-insert into rs_kukaro_scenario(type,iterate_period) values('A','00:00:10');
+delete from rs_2_scenario;
+insert into rs_2_scenario(type,iterate_period) values('A','00:00:10');

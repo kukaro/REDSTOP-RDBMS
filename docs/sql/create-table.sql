@@ -19,7 +19,8 @@ alter table rs_project add constraint fk_rsprojectowner_rsuserusername foreign k
 create table if not exists rs_demo_urls(
     project_id integer not null,
     url varchar(255) not null,
-    method varchar(10) not null
+    method varchar(10) not null,
+    name varchar(255) not null
 );
 
 alter table rs_demo_urls add constraint pk_rsdemourls_url_method primary key (url,method);
@@ -28,16 +29,17 @@ alter table rs_demo_urls add constraint fk_rsdemourlsprojectid_rsprojectid forei
 create table if not exists rs_kukaro_urls(
     project_id integer not null,
     url varchar(255) not null,
-    method varchar(10) not null
+    method varchar(10) not null,
+    name varchar(255) not null
 );
 
 alter table rs_kukaro_urls add constraint pk_rskukarourls_url_method primary key (url,method);
 alter table rs_kukaro_urls add constraint fk_rskukarourlsprojectid_rsprojectid foreign key rs_kukaro_urls(project_id) references rs_project(id) on delete cascade;
 
-create table if not exists rs_kukaro_scenario(
+create table if not exists rs_2_scenario(
     scenario_name varchar(100) not null default 'default',
     type set ('L','A') not null,
     iterate_period time not null default '00:01:00'
 );
 
-alter table rs_kukaro_scenario add constraint pk_rskukaroscenario_scenarioname primary key (scenario_name);
+alter table rs_2_scenario add constraint pk_rskukaroscenario_scenarioname primary key (scenario_name);
