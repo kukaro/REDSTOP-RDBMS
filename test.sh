@@ -1,1 +1,1 @@
-sudo mysql --force -uroot -p < docs/sql/test.sql
+sudo mysql --force -uroot -p123redstop456 < docs/sql/test.sql
