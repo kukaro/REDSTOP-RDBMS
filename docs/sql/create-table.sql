@@ -56,4 +56,5 @@ alter table rs_2_scenario add constraint pk_rskukaroscenario_scenarioname primar
     );
 
     alter table rs_${project_id}_${scenario_name}_block add constraint pk_rs${projectid}${scenarioname}_id primary key (id);
+    alter table rs_${project_id}_${scenario_name}_block add constraint fk_rs${projectid}${scenarioname}urlmehod_rs${owner}urlsurlmethond foreign key rs_${project_id}_${scenario_name}_block(url,method) references rs_${owner}urls(url,method);
 */
