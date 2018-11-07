@@ -8,6 +8,7 @@ alter table rs_user add constraint pk_rsuser_username primary key (username);
 
 create table if not exists rs_project(
     id integer not null auto_increment,
+    is_init boolean not null default false,
     owner varchar(30) not null,
     project_name varchar(100) not null,
     constraint pk_rsproject_id primary key (id)
@@ -43,3 +44,16 @@ create table if not exists rs_2_scenario(
 );
 
 alter table rs_2_scenario add constraint pk_rskukaroscenario_scenarioname primary key (scenario_name);
+
+/*
+    create table if not exists rs_${project_id}_${scenario_name}_block(
+        id varchar(100) not null,
+        name varchar(300) not null,
+        type set ('group','case','api') not null,
+        parentBlockId varchar(100) default null, 
+        url varchar(255) default null,
+        method varchar(10) default null
+    );
+
+    alter table rs_${project_id}_${scenario_name}_block add constraint pk_rs${projectid}${scenarioname}_id primary key (id);
+*/
