@@ -41,7 +41,7 @@ create table if not exists rs_2_scenario(
     scenario_name varchar(100) not null default 'default',
     type set ('L','A') not null,
     iterate_period time not null default '00:01:00',
-    xml longtext(10000) default null
+    xml longtext default null
 );
 
 alter table rs_2_scenario add constraint pk_rskukaroscenario_scenarioname primary key (scenario_name);
